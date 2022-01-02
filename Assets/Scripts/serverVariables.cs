@@ -1,22 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI;
-using MLAPI.Messaging;
-using MLAPI.NetworkVariable;
+using Unity.Netcode;
+//using Unity.Netcode.Messaging;
+//using Unity.Netcode.NetworkVariable;
 using UnityEngine.UI;
 
 public class serverVariables : NetworkBehaviour
 {
-    public NetworkVariableFloat bankInterest = new NetworkVariableFloat();
-    public NetworkVariableFloat bankCurrency = new NetworkVariableFloat();
-    public NetworkVariableInt goodFood = new NetworkVariableInt();
-    public NetworkVariableInt ehFood = new NetworkVariableInt();
-    public NetworkVariableInt bait = new NetworkVariableInt();
-    public NetworkVariableInt wood = new NetworkVariableInt();
-    public NetworkVariableInt oreInMine = new NetworkVariableInt();
-    public NetworkVariableInt rarity = new NetworkVariableInt();
-    public NetworkVariableInt ore = new NetworkVariableInt();
+    public NetworkVariable<float> bankInterest = new NetworkVariable<float>();
+    public NetworkVariable<float> bankCurrency = new NetworkVariable<float>();
+    public NetworkVariable<int> goodFood = new NetworkVariable<int>();
+    public NetworkVariable<int> ehFood = new NetworkVariable<int>();
+    public NetworkVariable<int> bait = new NetworkVariable<int>();
+    public NetworkVariable<int> wood = new NetworkVariable<int>();
+    public NetworkVariable<int> oreInMine = new NetworkVariable<int>();
+    public NetworkVariable<int> rarity = new NetworkVariable<int>();
+    public NetworkVariable<int> ore = new NetworkVariable<int>();
     // Start is called before the first frame update
     void Start()
     {

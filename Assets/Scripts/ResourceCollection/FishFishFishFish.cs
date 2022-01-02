@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI.Messaging;
-using MLAPI.Spawning;
-using MLAPI.NetworkVariable;
+//using Unity.Netcode.Messaging;
+//using Unity.Netcode.Spawning;
+//using Unity.Netcode.NetworkVariable;
 using UnityEngine.UI;
 using System.Text;
-using MLAPI;
+using Unity.Netcode;
 
 public class FishFishFishFish : NetworkBehaviour
 {
     int amountOfTimesFished;
     public GameObject Pond;
-    public NetworkVariableInt fish = new NetworkVariableInt();
+    public NetworkVariable<int> fish = new NetworkVariable<int>();
 
     bool canFish = false;
     

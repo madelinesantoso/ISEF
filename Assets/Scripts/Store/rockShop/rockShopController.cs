@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using MLAPI.NetworkVariable;
-using MLAPI;
+//using Unity.Netcode.NetworkVariable;
+using Unity.Netcode;
 
 public class rockShopController : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class rockShopController : MonoBehaviour
 
     public InputField sellField;
 
-    public NetworkVariableInt oreAmount = new NetworkVariableInt();
+    public NetworkVariable<int> oreAmount = new NetworkVariable<int>();
     public float orePrice;
 
     public Text sellText;

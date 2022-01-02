@@ -1,22 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI.NetworkVariable;
+//using Unity.Netcode.NetworkVariable;
 using UnityEngine.UI;
-using MLAPI;
-using MLAPI.Messaging;
+using Unity.Netcode;
+//using Unity.Netcode.Messaging;
 
 
 public class Banking : NetworkBehaviour
 {
-    public NetworkVariableFloat BankAdepositAmount = new NetworkVariableFloat();
+    public NetworkVariable<float> BankAdepositAmount = new NetworkVariable<float>();
     //float playerCashOnHand;
-    public NetworkVariableFloat playerCashOnHand = new NetworkVariableFloat();
+    public NetworkVariable<float> playerCashOnHand = new NetworkVariable<float>();
     public GameObject player;
     public GameObject bank;
     public GameObject square;
     public Text DepositAmountText;
-    public NetworkVariableFloat BankAStock = new NetworkVariableFloat();
+    public NetworkVariable<float> BankAStock = new NetworkVariable<float>();
     float bankAInterest;
     // Start is called before the first frame update
     void Start()
@@ -54,7 +54,7 @@ public class Banking : NetworkBehaviour
     {
         square = GameObject.FindGameObjectWithTag("squarePlease");
         CheckPlayerMoney();
-        NetworkVariableFloat BankAplayerCashOnHand = player.GetComponent<Item>().moneyAmount;
+        NetworkVariable<float> BankAplayerCashOnHand = player.GetComponent<Item>().moneyAmount;
         if (BankAplayerCashOnHand.Value > 0)
         {
             //print("you got cash to deposit! money on hand: " + playerCashOnHand.Value.ToString());
@@ -111,7 +111,7 @@ public class Banking : NetworkBehaviour
     
     void CheckPlayerMoney()
     {
-        NetworkVariableFloat BankAplayerCashOnHand = player.GetComponent<Item>().moneyAmount;
+        NetworkVariable<float> BankAplayerCashOnHand = player.GetComponent<Item>().moneyAmount;
     }
 
     void checkVar()

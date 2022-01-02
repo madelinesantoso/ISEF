@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI;
-using MLAPI.Messaging;
-using MLAPI.Spawning;
-using MLAPI.NetworkVariable;
+using Unity.Netcode;
+//using Unity.Netcode.Messaging;
+//using Unity.Netcode.Spawning;
+//using Unity.Netcode.NetworkVariable;
 using UnityEngine.UI;
 using System.Text;
 
@@ -15,7 +15,7 @@ public class Item : NetworkBehaviour
     public GameObject hatPrefab;
     public GameObject hat;
 
-    public NetworkVariableBool hatBool = new NetworkVariableBool();
+    public NetworkVariable<bool> hatBool = new NetworkVariable<bool>();
 
     public GameObject moneyPrefab;
     public GameObject money;
@@ -40,12 +40,12 @@ public class Item : NetworkBehaviour
     public GameObject inventories;
     public Text TradeMessages;
 
-    public NetworkVariableFloat moneyAmount = new NetworkVariableFloat();
-    public NetworkVariableFloat ehfoodAmount = new NetworkVariableFloat();
-    public NetworkVariableFloat goodFoodAmount = new NetworkVariableFloat();
-    public NetworkVariableFloat fishAmount = new NetworkVariableFloat();
-    public NetworkVariableFloat woodAmount = new NetworkVariableFloat();
-    public NetworkVariableInt oreAmount = new NetworkVariableInt();
+    public NetworkVariable<float> moneyAmount = new NetworkVariable<float>();
+    public NetworkVariable<float> ehfoodAmount = new NetworkVariable<float>();
+    public NetworkVariable<float> goodFoodAmount = new NetworkVariable<float>();
+    public NetworkVariable<float> fishAmount = new NetworkVariable<float>();
+    public NetworkVariable<float> woodAmount = new NetworkVariable<float>();
+    public NetworkVariable<int> oreAmount = new NetworkVariable<int>();
 
     public Text MessageText;
     public Text FoodText;
@@ -55,7 +55,7 @@ public class Item : NetworkBehaviour
     public Text woodText;
     public Text oreText;
 
-    public NetworkVariableFloat Health = new NetworkVariableFloat();
+    public NetworkVariable<float> Health = new NetworkVariable<float>();
 
     bool CanTrade = false;
     bool canFish = false;

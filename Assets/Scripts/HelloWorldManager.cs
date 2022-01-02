@@ -1,5 +1,5 @@
 
-using MLAPI;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +15,7 @@ namespace HelloWorld
         public Text PlayerDisplayName;
         public GameObject player;
 
-        private void Start()
+        private void start()
         {
             /*if (IsLocalPlayer)
             {

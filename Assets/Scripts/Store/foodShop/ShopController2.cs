@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using MLAPI.NetworkVariable;
-using MLAPI;
+//using MLAPI.NetworkVariable;
+using Unity.Netcode;
 
 public class ShopController2 : MonoBehaviour
 {
@@ -19,17 +19,17 @@ public class ShopController2 : MonoBehaviour
 
     public GameObject store;
 
-    public NetworkVariableInt goodFoodAmount = new NetworkVariableInt();
-    public NetworkVariableInt fineFoodAmount = new NetworkVariableInt();
-    public NetworkVariableInt ehFoodAmount = new NetworkVariableInt();
+    public NetworkVariable<int> goodFoodAmount = new NetworkVariable<int>();
+    public NetworkVariable<int> fineFoodAmount = new NetworkVariable<int>();
+    public NetworkVariable<int> ehFoodAmount = new NetworkVariable<int>();
 
-    public NetworkVariableFloat goodAmountValue = new NetworkVariableFloat();
-    public NetworkVariableFloat fineAmountValue = new NetworkVariableFloat();
-    public NetworkVariableFloat ehAmountValue = new NetworkVariableFloat();
+    public NetworkVariable<float> goodAmountValue = new NetworkVariable<float>();
+    public NetworkVariable<float> fineAmountValue = new NetworkVariable<float>();
+    public NetworkVariable<float> ehAmountValue = new NetworkVariable<float>();
 
     //sell values
-    public NetworkVariableFloat sellGoodAmountValue = new NetworkVariableFloat();
-    public NetworkVariableFloat sellEhAmountValue = new NetworkVariableFloat();
+    public NetworkVariable<float> sellGoodAmountValue = new NetworkVariable<float>();
+    public NetworkVariable<float> sellEhAmountValue = new NetworkVariable<float>();
 
     //sell panel
     public Text showGoodFoodValue;

@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI.NetworkVariable;
-using MLAPI;
+//using Unity.Netcode.NetworkVariable;
+using Unity.Netcode;
 using UnityEngine.UI;
 
 public class fishController : MonoBehaviour
@@ -12,8 +12,8 @@ public class fishController : MonoBehaviour
     public InputField sell;
     public InputField buy;
 
-    public NetworkVariableInt fish = new NetworkVariableInt();
-    public NetworkVariableFloat fishValue = new NetworkVariableFloat();
+    public NetworkVariable<int> fish = new NetworkVariable<int>();
+    public NetworkVariable<float> fishValue = new NetworkVariable<float>();
 
     public Text sellText;
     public Text buyText;

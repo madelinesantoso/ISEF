@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI.Messaging;
-using MLAPI.Spawning;
-using MLAPI.NetworkVariable;
+/*using Unity.Netcode.Messaging;
+using Unity.Netcode.Spawning;
+using Unity.Netcode.NetworkVariable;*/
 using UnityEngine.UI;
 using System.Text;
-using MLAPI;
+using Unity.Netcode;
 
 public class bankVar : NetworkBehaviour
 {
-    public NetworkVariableFloat BankAStock = new NetworkVariableFloat();
+    public NetworkVariable<float> BankAStock = new NetworkVariable<float>();
     // Start is called before the first frame update
     void Start()
     {

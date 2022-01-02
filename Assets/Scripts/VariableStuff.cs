@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI;
-using MLAPI.Messaging;
-using MLAPI.Collections;
-using MLAPI.NetworkVariable;
+using Unity.Netcode;
+//using MLAPI.Messaging;
+//using MLAPI.Collections;
+//using MLAPI.NetworkVariable;
 
 public class VariableStuff : NetworkBehaviour
 {
-    public NetworkVariable<float> amount = new NetworkVariable<float>(new NetworkVariableSettings { WritePermission = NetworkVariablePermission.Everyone }, 20);
+    public NetworkVariable<float> amount = new NetworkVariable<float>();
     // Start is called before the first frame update
     void Start()
     {

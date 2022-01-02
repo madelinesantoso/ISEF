@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using MLAPI.NetworkVariable;
-using MLAPI;
+//using Unity.Netcode.NetworkVariable;
+using Unity.Netcode;
 
 public class BankAController2 : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class BankAController2 : MonoBehaviour
     float DepositAmountFloat;
     float WithdrawAmountFloat;
 
-    public NetworkVariableFloat currency = new NetworkVariableFloat();
+    public NetworkVariable<float> currency = new NetworkVariable<float>(500.0f);
 
     public Text info;
     public Text info2;
@@ -78,8 +78,9 @@ public class BankAController2 : MonoBehaviour
     {
         bankingRadius.GetComponent<BankController>().ReturnHome();
         player = bankingRadius.GetComponent<BankController>().player;
-        NetworkVariableFloat tempplayersMoney = player.GetComponent<Item>().moneyAmount;
-        NetworkVariableFloat tempplayerdeposit = player.GetComponent<Banking>().BankAdepositAmount;
+        //fix!!
+        NetworkVariable<float> tempplayersMoney = player.GetComponent<Item>().moneyAmount;
+        NetworkVariable<float> tempplayerdeposit = player.GetComponent<Banking>().BankAdepositAmount;
         playerAmountCurrency = tempplayersMoney.Value;
         playerAmountDeposit = tempplayerdeposit.Value;
     }

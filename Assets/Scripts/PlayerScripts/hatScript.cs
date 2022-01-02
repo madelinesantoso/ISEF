@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI;
-using MLAPI.Messaging;
-using MLAPI.Spawning;
-using MLAPI.NetworkVariable;
+using Unity.Netcode;
+//using Unity.Netcode.Messaging;
+//using Unity.Netcode.Spawning;
+//using Unity.Netcode.NetworkVariable;
 using UnityEngine.UI;
 using System.Text;
 
 public class hatScript : NetworkBehaviour
 {
-    public NetworkVariableBool cowboyHat = new NetworkVariableBool();
+    public NetworkVariable<bool> cowboyHat = new NetworkVariable<bool>();
     public GameObject hat;
     public GameObject cowboyPrefab;
     // Start is called before the first frame update

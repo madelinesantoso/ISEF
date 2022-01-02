@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using MLAPI;
-using MLAPI.Messaging;
-using MLAPI.Spawning;
-using MLAPI.NetworkVariable;
+using Unity.Netcode;
+//using Unity.Netcode.Messaging;
+//using Unity.Netcode.Spawning;
+//using Unity.Netcode.NetworkVariable;
 using UnityEngine.UI;
 using System.Text;
 
 public class fishPond : NetworkBehaviour
 {
-    public NetworkVariableInt fishAmount = new NetworkVariableInt();
-    public NetworkVariable<float> fishStuff = new NetworkVariable<float>(new NetworkVariableSettings { WritePermission = NetworkVariablePermission.Everyone}, 20);
+    public NetworkVariable<int> fishAmount = new NetworkVariable<int>();
+    public NetworkVariable<float> fishStuff = new NetworkVariable<float>();
 
     void Start()
     {

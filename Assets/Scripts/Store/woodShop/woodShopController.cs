@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using MLAPI.NetworkVariable;
-using MLAPI;
+//using MLAPI.NetworkVariable;
+using Unity.Netcode;
 
 
 public class woodShopController : MonoBehaviour
@@ -14,7 +14,7 @@ public class woodShopController : MonoBehaviour
     public InputField sellWoodField;
     public InputField buyWoodField;
 
-    public NetworkVariableInt woodAmount = new NetworkVariableInt();
+    public NetworkVariable<int> woodAmount = new NetworkVariable<int>();
     public float sellWood;
     public float woodPrice;
 
