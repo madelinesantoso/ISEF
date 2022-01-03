@@ -80,10 +80,11 @@ namespace HelloWorld
         public void StartClient()
         {
             NetworkManager.Singleton.StartClient();
+            print("start client");
             Stuff.SetActive(false);
             EnteredName = textBox.text;
 
-            print(PlayerDisplayName.text);
+            //print(PlayerDisplayName.text);
             /*if (IsLocalPlayer)
             {
                 Text PlayerDisplayName = player.transform.Find("Name").GetComponent<Text>();

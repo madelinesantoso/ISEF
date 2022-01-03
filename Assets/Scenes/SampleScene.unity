@@ -20165,18 +20165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c005b32a68a254cbe502a4e5cb8eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ChannelsCache: []
-  m_originalRoomMasterClient: -1
-  m_NickName: Maddy
-  m_RoomName: TestingRoom
-  m_MaxPlayers: 16
-  m_ChannelIdCodesStartRange: 0
-  m_AttachSupportLogger: 0
-  m_BatchMode: 1
-  m_SendQueueBatchSize: 4096
-  m_BatchedTransportEventCode: 129
-  m_KickEventCode: 130
-  m_IsHostOrServer: 0
 --- !u!114 &1637961021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20195,62 +20183,73 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1637961023}
-    RegisteredScenes:
-    - SampleScene
-    AllowRuntimeSceneChanges: 0
+    PlayerPrefab: {fileID: 3062500749930524086, guid: ebabe9e7441e76840b06986c0978fbc5, type: 3}
     NetworkPrefabs:
-    - Prefab: {fileID: 3062500749930524086, guid: ebabe9e7441e76840b06986c0978fbc5, type: 3}
-      PlayerPrefab: 1
-    - Prefab: {fileID: 6223296892914393746, guid: 3c32d1f0859d4334cafc83f7ee831ed1, type: 3}
-      PlayerPrefab: 0
-    - Prefab: {fileID: 2283195507798367584, guid: f6d7cdaa89c8ef34b90f8e54aa8dacd8, type: 3}
-      PlayerPrefab: 0
-    - Prefab: {fileID: 7677192154195431192, guid: 56268b246124ac54ab70a3aed3be8945, type: 3}
-      PlayerPrefab: 0
-    - Prefab: {fileID: 6330024794449036604, guid: 1678e7da1053bf2428d08584c5ae772b, type: 3}
-      PlayerPrefab: 0
-    - Prefab: {fileID: 6001979569042250319, guid: 8d2dd19a031896147af178d24e6f272f, type: 3}
-      PlayerPrefab: 0
-    - Prefab: {fileID: 7957119661352010293, guid: 893bdefb0673a92409452fb403512a7f, type: 3}
-      PlayerPrefab: 0
-    - Prefab: {fileID: 8360395163445008700, guid: 97c582fabd4613c4d91a57b89f460325, type: 3}
-      PlayerPrefab: 0
-    - Prefab: {fileID: 3417137073177943231, guid: 618b6fad1148e034d88d8085a059cc81, type: 3}
-      PlayerPrefab: 0
-    - Prefab: {fileID: 6056172987729347026, guid: b2278bb5e65bedb48a4d3ca64e0ad211, type: 3}
-      PlayerPrefab: 0
-    - Prefab: {fileID: 4760305503835776142, guid: d999d761ae57f2f49b142ce108e65c72, type: 3}
-      PlayerPrefab: 0
-    PlayerPrefabHash:
-      id: 0
-    CreatePlayerPrefab: 1
-    ReceiveTickrate: 64
-    NetworkTickIntervalSec: 0.05
-    MaxReceiveEventsPerTickRate: 500
-    EventTickrate: 64
+    - Override: 0
+      Prefab: {fileID: 6223296892914393746, guid: 3c32d1f0859d4334cafc83f7ee831ed1, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 2283195507798367584, guid: f6d7cdaa89c8ef34b90f8e54aa8dacd8, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 7677192154195431192, guid: 56268b246124ac54ab70a3aed3be8945, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 6330024794449036604, guid: 1678e7da1053bf2428d08584c5ae772b, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 6001979569042250319, guid: 8d2dd19a031896147af178d24e6f272f, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 7957119661352010293, guid: 893bdefb0673a92409452fb403512a7f, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 8360395163445008700, guid: 97c582fabd4613c4d91a57b89f460325, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 3417137073177943231, guid: 618b6fad1148e034d88d8085a059cc81, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 6056172987729347026, guid: b2278bb5e65bedb48a4d3ca64e0ad211, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    - Override: 0
+      Prefab: {fileID: 4760305503835776142, guid: d999d761ae57f2f49b142ce108e65c72, type: 3}
+      SourcePrefabToOverride: {fileID: 0}
+      SourceHashToOverride: 0
+      OverridingTargetPrefab: {fileID: 0}
+    TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
     ConnectionData: 
     EnableTimeResync: 0
     TimeResyncInterval: 30
-    EnableNetworkVariable: 1
     EnsureNetworkVariableLengthSafety: 0
     EnableSceneManagement: 1
     ForceSamePrefabs: 1
-    UsePrefabSync: 1
     RecycleNetworkIds: 1
     NetworkIdRecycleDelay: 120
     RpcHashSize: 0
     LoadSceneTimeOut: 120
-    EnableMessageBuffering: 1
     MessageBufferTimeout: 20
     EnableNetworkLogs: 1
-  references:
-    version: 1
-    00000000:
-      type: {class: NullableBoolSerializable, ns: MLAPI.Configuration, asm: Unity.Multiplayer.MLAPI.Runtime}
-      data:
-        Value: 6825399121702647142
 --- !u!4 &1637961022
 Transform:
   m_ObjectHideFlags: 0
@@ -20283,12 +20282,6 @@ MonoBehaviour:
   ConnectAddress: 127.0.0.1
   ConnectPort: 7777
   ServerListenPort: 7777
-  ServerWebsocketListenPort: 8887
-  SupportWebsocket: 0
-  Channels: []
-  UseMLAPIRelay: 0
-  MLAPIRelayAddress: 184.72.104.138
-  MLAPIRelayPort: 8888
   MessageSendMode: 0
 --- !u!114 &1637961024
 MonoBehaviour:
